@@ -6,7 +6,7 @@ public class Marcador implements AutoListener {
 
     private int numeroPlazas;
     private int numeroPlazasOcupadas = 0;
-    private int numeroPlazasLibres;
+    private int numeroPlazasLibres = 10;
 
     public Marcador() {
     }

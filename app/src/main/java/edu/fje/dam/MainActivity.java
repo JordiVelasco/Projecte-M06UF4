@@ -2,7 +2,7 @@ package edu.fje.dam;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.graphics.Paint;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -21,19 +21,19 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void entrarCoche(View v){
+    public void entrarCoche(View v) {
         final Button sumCoche = (Button) findViewById(R.id.sumCoche);
         final Button resCoche = (Button) findViewById(R.id.restCoche);
         final TextView textCoche = (TextView) findViewById(R.id.textNumCoche);
         parkingCoche.anadirCoche(new Coche());
-        textCoche.setText(marcadorCoche.getNumeroPlazasLibres()+"");
-        if(marcadorCoche.getNumeroPlazasLibres() < marcadorCoche.getNumeroPlazas()){
+        textCoche.setText(marcadorCoche.getNumeroPlazasLibres() + "");
+        if (marcadorCoche.getNumeroPlazasLibres() < marcadorCoche.getNumeroPlazas()) {
             resCoche.setEnabled(false);
         }
-        if(marcadorCoche.getNumeroPlazasLibres() <= 0){
+        if (marcadorCoche.getNumeroPlazasLibres() <= 0) {
             sumCoche.setEnabled(true);
 
-        }else {
+        } else {
             textCoche.setText("hola");
         }
     }
